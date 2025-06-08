@@ -1,0 +1,29 @@
+# Node
+node_modules/
+.env
+.env.local
+.env.*.local
+
+# Build output
+.next/
+out/
+dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# IDEs
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Optional: lockfiles (descomenta solo si no querés subirlos)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
