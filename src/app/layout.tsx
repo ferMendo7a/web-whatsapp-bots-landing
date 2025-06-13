@@ -1,5 +1,5 @@
 import "./globals.css";
-import Header from "./components/header";
+import Header from "./components/Header";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
       </head>
-      <body className="bg-white text-gray-900">
+      <body className="bg-gradient-to-b from-gray-900 to-black text-white">
         <Header />
         {children}
       </body>

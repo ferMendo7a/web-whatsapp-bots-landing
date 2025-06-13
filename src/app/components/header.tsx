@@ -2,11 +2,13 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="bg-gray-900 shadow p-4 flex justify-between items-center">
-      <h1 className="text-xl font-bold text-teal-400">WhatsApp Bots</h1>
+    <header className="sticky top-0 z-50 bg-gray-900 p-4 flex justify-between items-center shadow-md">
+      <h1 className="text-xl font-bold text-teal-400">BotZero</h1>
       <nav className="space-x-4">
-        <Link href="/" className="text-gray-200 hover:text-teal-400">Inicio</Link>
-        <Link href="/precios" className="text-gray-200 hover:text-teal-400">Precios</Link>
+        <Link href="#inicio" className="text-gray-300 hover:text-teal-400">Inicio</Link>
+        <Link href="#beneficios" className="text-gray-300 hover:text-teal-400">Beneficios</Link>
+        <Link href="#instrucciones" className="text-gray-300 hover:text-teal-400">¿Cómo funciona?</Link>
+        <Link href="#contacto" className="text-gray-300 hover:text-teal-400">Contacto</Link>
       </nav>
     </header>
   );
