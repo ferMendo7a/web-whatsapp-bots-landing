@@ -1,9 +1,9 @@
-import "./globals.css";
-import Header from "./components/Header";
+import "@/styles/globals.css";
+import Header from "@/components/layout/Header";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Bots de WhatsApp",
+  title: "botery",
   description: "Automatiza tu negocio con bots personalizados de WhatsApp",
 };
 

@@ -1,6 +1,6 @@
 "use client";
 
-import FadeInWhenVisible from "./FadeInWhenVisible";
+import FadeInWhenVisible from "@/components/ui/FadeInWhenVisible";
 import { FaRobot, FaClock, FaChartLine } from "react-icons/fa";
 
 export default function Beneficios() {
@@ -8,7 +8,7 @@ export default function Beneficios() {
     <section id="beneficios" className="min-h-screen flex flex-col justify-center items-center text-center px-4 bg-gradient-to-b from-gray-900 to-black text-white">
       <div className="max-w-6xl mx-auto text-center">
         <FadeInWhenVisible>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Beneficios de Automatizar con WhatsApp Bots</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Beneficios de Automatizar con botery</h2>
           <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
             Nuestros bots están diseñados para ahorrarte tiempo, mejorar la atención al cliente y ayudarte a escalar tu negocio.
           </p>
