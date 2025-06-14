@@ -3,8 +3,14 @@ import Header from "@/components/layout/Header";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "botery",
+  title: "botery – Bots de WhatsApp para tu negocio",
   description: "Automatiza tu negocio con bots personalizados de WhatsApp",
+  keywords: ["WhatsApp", "bots", "automatización", "negocios", "atención al cliente"],
+  other: {
+    "og:title": "botery – Bots de WhatsApp para tu negocio",
+    "og:description": "Automatiza tu negocio con bots personalizados de WhatsApp",
+    "og:type": "website",
+  }
 };
 
 export default function RootLayout({
