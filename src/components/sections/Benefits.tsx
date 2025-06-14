@@ -14,9 +14,9 @@ export default function Beneficios() {
           </p>
         </FadeInWhenVisible>
 
-        <div className="grid gap-8 md:grid-cols-3 text-left">
+        <div className="grid gap-8 md:grid-cols-3 text-left items-stretch">
           <FadeInWhenVisible delay={0.1}>
-            <div className="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition duration-300">
+            <div className="h-full bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition duration-300 flex flex-col">
               <FaRobot className="text-teal-400 text-4xl mb-4" />
               <h3 className="text-xl font-semibold mb-2">Automatización inteligente</h3>
               <p className="text-gray-400">
@@ -26,7 +26,7 @@ export default function Beneficios() {
           </FadeInWhenVisible>
 
           <FadeInWhenVisible delay={0.2}>
-            <div className="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition duration-300">
+            <div className="h-full bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition duration-300 flex flex-col">
               <FaClock className="text-teal-400 text-4xl mb-4" />
               <h3 className="text-xl font-semibold mb-2">Ahorro de tiempo</h3>
               <p className="text-gray-400">
@@ -36,7 +36,7 @@ export default function Beneficios() {
           </FadeInWhenVisible>
 
           <FadeInWhenVisible delay={0.3}>
-            <div className="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition duration-300">
+            <div className="h-full bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition duration-300 flex flex-col">
               <FaChartLine className="text-teal-400 text-4xl mb-4" />
               <h3 className="text-xl font-semibold mb-2">Escalabilidad</h3>
               <p className="text-gray-400">
