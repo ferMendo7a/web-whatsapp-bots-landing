@@ -4,7 +4,7 @@ import useContactForm from "@/hooks/useContactForm";
 import FadeInWhenVisible from "@/components/ui/FadeInWhenVisible";
 
 export default function ContactForm() {
-  const { form, enviado, handleChange, handleSubmit } = useContactForm();
+  const { form, sent, handleChange, handleSubmit } = useContactForm();
 
   return (
     <FadeInWhenVisible delay={0.4}>
@@ -18,7 +18,7 @@ export default function ContactForm() {
             Completá tus datos y nos comunicaremos contigo
           </p>
 
-          {enviado ? (
+          {sent ? (
             <div className="text-center bg-green-600 p-4 rounded-lg shadow">
               ¡Gracias por contactarnos! Te responderemos pronto.
             </div>
@@ -31,8 +31,8 @@ export default function ContactForm() {
                 <label className="block mb-1 font-semibold">Nombre</label>
                 <input
                   type="text"
-                  name="nombre"
-                  value={form.nombre}
+                  name="name"
+                  value={form.name}
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-2 rounded bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-teal-500"
@@ -44,8 +44,8 @@ export default function ContactForm() {
                 </label>
                 <input
                   type="email"
-                  name="correo"
-                  value={form.correo}
+                  name="email"
+                  value={form.email}
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-2 rounded bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-teal-500"
@@ -57,8 +57,8 @@ export default function ContactForm() {
                 </label>
                 <input
                   type="tel"
-                  name="telefono"
-                  value={form.telefono}
+                  name="phone"
+                  value={form.phone}
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-2 rounded bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-teal-500"

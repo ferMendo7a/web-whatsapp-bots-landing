@@ -1,43 +1,40 @@
 import { useState, ChangeEvent, FormEvent } from "react";
 
-type FormState = {
-  nombre: string;
-  correo: string;
-  telefono: string;
-};
+type FormState = { name: string; email: string; phone: string };
 
 export default function useContactForm() {
-  const [form, setForm] = useState<FormState>({
-    nombre: "",
-    correo: "",
-    telefono: "",
-  });
+  const [form, setForm]   = useState<FormState>({ name: "", email: "", phone: "" });
+  const [sent, setSent]   = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
 
-  const [enviado, setEnviado] = useState(false);
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) =>
+    setForm({ ...form, [e.target.name]: e.target.value });
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setForm((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    setError(null);
+    setLoading(true);
 
-    // Simular envío (reemplazá con API real si tenés backend)
-    console.log("Formulario enviado:", form);
-    setEnviado(true);
+    try {
+      const res = await fetch("/api/contacts", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
 
-    // Reset del formulario luego de unos segundos (opcional)
-    setTimeout(() => {
-      setForm({ nombre: "", correo: "", telefono: "" });
-      setEnviado(false);
-    }, 4000);
+      if (!res.ok) {
+        const { error } = await res.json();
+        throw new Error(error ?? "Error al enviar datos");
+      }
+
+      setSent(true);
+    } catch (err: any) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
   };
 
-  return {
-    form,
-    enviado,
-    handleChange,
-    handleSubmit,
-  };
+  return { form, sent, error, loading, handleChange, handleSubmit };
 }
